@@ -33,6 +33,6 @@ end
 end
 
 package 'grails' do
-  version "#{node['grails']['version']}"
+  version node['grails']['version']
   action :install
 end
