@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: development
+# Cookbook Name:: groovy
 # Recipe:: default
 #
 # Copyright 2012, YOUR_COMPANY_NAME
@@ -11,12 +11,12 @@ include_recipe "java"
 
 case node["platform"]
 when "ubuntu"
-  #sudo apt-add-repository ppa:groovy-dev/grails
+  #sudo apt-add-repository ppa:groovy-dev/groovy
   #sudo apt-get update
-  #sudo apt-get install grails
+  #sudo apt-get install groovy
   package 'python-software-properties'
-  apt_repository "grails" do
-    uri "http://ppa.launchpad.net/groovy-dev/grails/ubuntu "
+  apt_repository "groovy" do
+    uri "http://ppa.launchpad.net/groovy-dev/groovy/ubuntu "
     distribution node['lsb']['codename']
     components ["main"]
     keyserver "keyserver.ubuntu.com"
@@ -26,13 +26,7 @@ when "ubuntu"
   end
 end
 
-['unzip'].each do |pkg|
-    package pkg do
-        :install
-    end
-end
-
-package 'grails' do
-  version node['grails']['version']
+package 'groovy' do 
+  version node['groovy']['version']
   action :install
 end
