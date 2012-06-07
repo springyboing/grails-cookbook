@@ -17,8 +17,7 @@ task :default => 'foodcritic'
 private
 
 def prepare_foodcritic_sandbox(sandbox)
-  files = %w{*.md *.rb attributes definitions files providers
-recipes resources templates}
+  files = %w{*.md *.rb attributes definitions files providers recipes resources templates}
 
   rm_rf sandbox
   mkdir_p sandbox
