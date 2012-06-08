@@ -26,7 +26,6 @@ when "ubuntu"
   end
 end
 
-package 'groovy' do 
-  version node['groovy']['version']
+package "groovy-#{node['groovy']['version']}" do 
   action :install
 end
