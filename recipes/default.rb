@@ -7,6 +7,10 @@
 # All rights reserved - Do Not Redistribute
 #
 
+package "unzip" do
+  action :install
+end
+
 ark "grails" do
   url "#{node['grails']['source_url']}"
   version "#{node['grails']['version']}"
