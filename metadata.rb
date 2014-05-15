@@ -1,3 +1,4 @@
+name             "grails"
 maintainer       "Tim Redding"
 maintainer_email "chef-grails@accio.co.uk"
 license          "All rights reserved"
